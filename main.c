@@ -17,8 +17,17 @@ void capturar_enteros(){
     printf("Promedio %f\n",suma/5.0);
 
 }
+void mostar(int n,char cadena[]){
+    for (size_t i = 0; i < n; i++)
+    {
+        printf("%s",cadena);
+    }
+    
+}
 int main(){
     char op;
+    char cadena[20];
+    int n;
     do{
         printf("1) Capturar enteros\n");
         printf("2) Mostar cadena n veces\n");
@@ -33,7 +42,11 @@ int main(){
             break;
 
         case '2':
-            
+            printf("Escribe una cadena de hasta 20 caracteres: ");
+            fgets(cadena, sizeof(cadena), stdin);
+            printf("n: ");
+            scanf("%i",&n);
+            mostar(n,cadena);
             break;
 
         case '3':
